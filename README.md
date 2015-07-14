@@ -12,7 +12,7 @@ getui developer SDK.
 - createNotificationTemplate($options) 创建通知透传功能模板
 - createTransmissionTemplate($options) 创建透传功能模板
 
-#### 1.初始化对象
+##### 1.初始化对象
 ```php
 require_once('Getui.class.php');
 
@@ -25,7 +25,7 @@ $getui = new Getui($options);
 //TODO 调用$getui类方法
 ```
 
-#### 2.推送通知透传消息模板给指定用户
+##### 2.推送通知透传消息模板给指定用户
 ```php
 $template_options = array(
     'transmission_content' => '透传内容，跳转到对应的订单详情页面',    // 透传内容
@@ -39,7 +39,7 @@ $response = $getui->pushMessageToSingle($client_id, $template1);
 print_r($response);
 ```
 
-#### 3.推送透传消息模板给单个应用的所有用户
+##### 3.推送透传消息模板给单个应用的所有用户
 ```php
 // 创建透传消息模板
 $template_options = array(
@@ -47,7 +47,7 @@ $template_options = array(
 );
 $template2 = $getui->createTransmissionTemplate($template_options);
 
-$response = $getui->pushMessageToApp($template1, array('ANDROID'), array('上海', '福建'));
+$response = $getui->pushMessageToApp($template2, array('ANDROID'), array('上海', '福建'));
 print_r($response);
 ```
 
