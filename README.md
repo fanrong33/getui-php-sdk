@@ -6,12 +6,13 @@ getui developer SDK.
 
 ##Getui.class.php 官方API类库
 
-### 主要功能 
+### Functions
 - pushMessageToSingle($client_id, $template) 指定用户推送消息
 - pushMessageToApp($template, $phone_type_list, $province_list) 对单个应用下的所有用户进行推送，可根据机型、省份、标签过滤推送
 - createNotificationTemplate($options) 创建通知透传功能模板
 - createTransmissionTemplate($options) 创建透传功能模板
 
+### Demo
 ##### 1.初始化对象
 ```php
 require_once('Getui.class.php');
@@ -32,10 +33,10 @@ $template_options = array(
     'title'                => '应用名称',    // 通知栏标题
     'text'                 => '你有一个新的付款订单，点击查看！',    // 通知栏内容
 );
-$template1 = $getui->createNotificationTemplate($template_options);
+$template = $getui->createNotificationTemplate($template_options);
 
 $client_id = '5a2547f6d56749932736837a3e60bd35';
-$response = $getui->pushMessageToSingle($client_id, $template1);
+$response = $getui->pushMessageToSingle($client_id, $template);
 print_r($response);
 ```
 
@@ -45,9 +46,9 @@ print_r($response);
 $template_options = array(
     'transmission_content' => '透传内容，跳转到对应的订单详情页面',    // 透传内容
 );
-$template2 = $getui->createTransmissionTemplate($template_options);
+$template = $getui->createTransmissionTemplate($template_options);
 
-$response = $getui->pushMessageToApp($template2, array('ANDROID'), array('上海', '福建'));
+$response = $getui->pushMessageToApp($template, array('ANDROID'), array('上海', '福建'));
 print_r($response);
 ```
 
