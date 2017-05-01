@@ -1,4 +1,4 @@
-##Getui-php-sdk
+## Getui-php-sdk
 
 个推开放平台php开发包,细化各项接口操作,欢迎Fork此项目  
 getui developer SDK.
@@ -53,18 +53,18 @@ print_r($response);
 ```
 
 
-##History
+## History
 
 v1.1.0 Build 20150714
 
 - 发布基础版本
 
-##TODO
+## TODO
 对单个应用下的多个用户进行推送
 
 
 
 
-##License
+## License
 
 The MIT License (MIT)
