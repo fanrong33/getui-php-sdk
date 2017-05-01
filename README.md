@@ -4,7 +4,7 @@
 getui developer SDK.
 项目地址：**https://github.com/fanrong33/getui-php-sdk**  
 
-##Getui.class.php 官方API类库
+## Getui.class.php 官方API类库
 
 ### Functions
 - pushMessageToSingle($client_id, $template) 指定用户推送消息
